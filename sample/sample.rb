@@ -9,15 +9,16 @@ p "ログイン成功!"
 p "架空の課金状況の登録"
 p client.regist_dummy_payment
 
+p "Subscriber一覧取得"
 subscribers = client.subscribers
 p subscribers
 
 p "----------------"
-
+p "架空のSubscriberの登録"
 subscriber = client.create_new_subscribers
 p subscriber
 
 p "----------------"
-
+p "Subscriber一覧取得"
 subscribers = client.subscribers
 p subscribers
