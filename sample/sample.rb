@@ -1,9 +1,7 @@
 require_relative '../lib/sandbox_client.rb'
+require_relative 'auth_settings.rb'
 
-# 本番環境のSAMユーザに対する認証キーとパスワードを設定。
-AUTH_KEY_ID = "keyId-IPiOpVFYgEyjPqIoxjoKaCklsvdGqfTn"
-AUTH_KEY = "secret-gYkX8Mp57wzgauM4tqEdnOAwidlRN9VgwCCxG8y1OgtVZQ0Og3r8A13wARlEmV4u"
-
+# AUTH_KEY_IDとAUTH_KEYはauth_settings.rbで定義してある
 sandbox_emal = "example_%d@example.com" % Time.now.to_i
 SANDBOX_PASSWORD = "superStrongP@ssw0rd"
 client = SandboxClient.new(sandbox_emal, SANDBOX_PASSWORD, AUTH_KEY_ID, AUTH_KEY)
